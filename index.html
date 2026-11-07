@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Days Until Christmas – Live Countdown &amp; World Christmas Clock</title>
+<meta name="description" content="How long until Christmas? See a live countdown in days, weeks, hours and minutes, check when Christmas begins in 10 cities around the world, and tick off your Christmas checklist.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Days Until Christmas – Live Countdown &amp; World Christmas Clock">
+<meta property="og:description" content="A cosy Christmas countdown with a world clock and a holiday checklist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Days Until Christmas",
+      "applicationCategory":"LifestyleApplication",
+      "operatingSystem":"Browser",
+      "inLanguage":"en",
+      "description":"Live Christmas countdown with a world Christmas clock for 10 cities and an interactive holiday checklist.",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Which country celebrates Christmas first?","acceptedAnswer":{"@type":"Answer","text":"Kiritimati (Christmas Island) in Kiribati is in the UTC+14 time zone, so it is one of the first inhabited places to reach midnight on December 25."}},
+        {"@type":"Question","name":"Which place celebrates Christmas last?","acceptedAnswer":{"@type":"Answer","text":"American Samoa, in the UTC−11 time zone, is among the last inhabited places to reach Christmas Day – about 25 hours after Kiritimati."}},
+        {"@type":"Question","name":"How many weeks until Christmas?","acceptedAnswer":{"@type":"Answer","text":"Divide the days left by seven. The countdown on this page shows the exact number of weeks, days, hours and minutes in real time."}},
+        {"@type":"Question","name":"When are the 12 days of Christmas?","acceptedAnswer":{"@type":"Answer","text":"In the Western tradition, the twelve days of Christmas run from Christmas Day, December 25, to January 5. January 6 is Epiphany."}},
+        {"@type":"Question","name":"When is Orthodox Christmas?","acceptedAnswer":{"@type":"Answer","text":"Many Orthodox churches that follow the Julian calendar celebrate Christmas on January 7."}},
+        {"@type":"Question","name":"Is Christmas a public holiday everywhere?","acceptedAnswer":{"@type":"Answer","text":"No. Christmas is a public holiday in most countries, but not in all – in Japan, for example, December 25 is a normal working day."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="ribbon" aria-hidden="true"></div>
+<header class="hd">
+  <div class="wrap hd-in">
+    <a href="#" class="logo" aria-label="Days Until Christmas home">
+      <span class="logo-star" aria-hidden="true">★</span>
+      <span>Days<em>until</em>Christmas</span>
+    </a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.nav').classList.toggle('open')"><span></span><span></span></button>
+    <nav class="nav">
+      <a href="#" class="cur">Countdown</a>
+      <a href="#world">World Clock</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="tag" id="tag">25 December 2026 · Friday</p>
+      <h1>Days until <span>Christmas</span></h1>
+      <p class="intro">Light the candles and put the kettle on – the most wonderful time of the year is on its way. Watch the clock tick down, see when Christmas arrives around the world and tick off your festive to-dos. Prefer a simple daily number? Visit <a href="https://christmasdaysleft.com/">How many days until Christmas?</a> for a quick answer anytime.</p>
+      <div class="units">
+        <div><b id="u-weeks">7.1</b><span>weeks</span></div>
+        <div><b id="u-hours">1,184</b><span>hours</span></div>
+        <div><b id="u-mins">71,040</b><span>minutes</span></div>
+        <div><b id="u-sun">7</b><span>Sundays</span></div>
+      </div>
+    </div>
+
+    <div class="ring-card" aria-live="polite">
+      <div class="ring">
+        <svg viewBox="0 0 220 220" aria-hidden="true">
+          <circle cx="110" cy="110" r="96" class="r-bg"/>
+          <circle cx="110" cy="110" r="96" class="r-fg" id="r-fg"/>
+        </svg>
+        <div class="ring-in">
+          <b id="r-days">50</b>
+          <span id="r-label">days to go</span>
+        </div>
+      </div>
+      <div class="hms">
+        <div><b id="t-h">00</b><span>hrs</span></div>
+        <div><b id="t-m">00</b><span>min</span></div>
+        <div><b id="t-s">00</b><span>sec</span></div>
+      </div>
+      <p class="ring-note" id="ring-note">86% of the way from last Christmas</p>
+      <button type="button" class="copy" id="copy">Copy countdown</button>
+    </div>
+  </div>
+  <div class="trees" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0 120V96l40-46 22 26 32-64 32 64 20-30 34 50 38-62 40 62 26-34 30 40 44-72 44 72 24-30 34 46 40-66 40 66 30-42 28 36 38-58 38 58 26-32 34 44 42-70 42 70 24-30 30 38 36-54 36 54 28-36 32 44 40-64 40 64 22-26 32 40 38-60 38 60 26-30 30 46V120z" fill="#2f5d50"/></svg>
+  </div>
+</section>
+
+<main>
+  <!-- ===== WORLD CLOCK ===== -->
+  <section class="sec wrap" id="world">
+    <div class="sec-head"><p class="kick">Around the globe</p><h2>World Christmas clock</h2>
+    <p>Christmas does not arrive everywhere at once. It starts on Kiritimati in the Pacific and travels west for more than a day. Here is how long it is until midnight on December 25 in ten cities – right now.</p></div>
+    <div class="cities" id="cities"></div>
+  </section>
+
+  <!-- ===== CHECKLIST ===== -->
+  <section class="sec wrap split">
+    <div>
+      <p class="kick">Get ready</p>
+      <h2>Your Christmas checklist</h2>
+      <p>Tick things off as you go – your progress is saved on this device, so you can come back every day of the countdown.</p>
+      <div class="cl-progress">
+        <div class="cl-top"><span>Ready for Christmas</span><b id="cl-pct">0%</b></div>
+        <div class="cl-bar"><i id="cl-bar"></i></div>
+      </div>
+      <button type="button" class="reset" id="cl-reset">Reset checklist</button>
+    </div>
+    <ul class="checklist" id="checklist"></ul>
+  </section>
+
+  <!-- ===== TIMELINE ===== -->
+  <section class="sec wrap">
+    <div class="sec-head"><p class="kick">Week by week</p><h2>A relaxed Christmas countdown plan</h2></div>
+    <ol class="timeline">
+      <li><span>8 weeks</span><h3>Make the list</h3><p>Write down who you are buying for, set a budget and note any dates for parties or travel.</p></li>
+      <li><span>6 weeks</span><h3>Book and order</h3><p>Book travel and restaurant tables, and order personalised or handmade gifts that need extra time.</p></li>
+      <li><span>4 weeks</span><h3>Deck the halls</h3><p>Advent begins around now – bring out the decorations and pick up a tree.</p></li>
+      <li><span>2 weeks</span><h3>Send and wrap</h3><p>Post cards and parcels, especially overseas, and start wrapping in the evenings.</p></li>
+      <li><span>1 week</span><h3>Food and finishing touches</h3><p>Plan the menu, do the big shop and prepare anything that freezes well.</p></li>
+      <li><span>1 day</span><h3>Christmas Eve</h3><p>Stockings up, a film on, and nothing left to do but enjoy it.</p></li>
+    </ol>
+  </section>
+
+  <!-- ===== 12 DAYS ===== -->
+  <section class="twelve">
+    <div class="wrap">
+      <div class="sec-head light"><p class="kick">After the countdown</p><h2>The 12 days of Christmas</h2>
+      <p>Christmas does not end on December 25. In the Western tradition, the twelve days run from Christmas Day to January 5, ending on the eve of Epiphany.</p></div>
+      <div class="days12">
+        <div><b>1</b><span>Dec 25</span></div><div><b>2</b><span>Dec 26</span></div><div><b>3</b><span>Dec 27</span></div><div><b>4</b><span>Dec 28</span></div>
+        <div><b>5</b><span>Dec 29</span></div><div><b>6</b><span>Dec 30</span></div><div><b>7</b><span>Dec 31</span></div><div><b>8</b><span>Jan 1</span></div>
+        <div><b>9</b><span>Jan 2</span></div><div><b>10</b><span>Jan 3</span></div><div><b>11</b><span>Jan 4</span></div><div><b>12</b><span>Jan 5</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FUN ===== -->
+  <section class="sec wrap">
+    <div class="sec-head"><p class="kick">Did you know?</p><h2>Christmas by the numbers</h2></div>
+    <div class="nums">
+      <article><b>UTC+14</b><p>Kiritimati’s time zone – one of the first places on Earth to reach Christmas Day.</p></article>
+      <article><b>~25 h</b><p>Roughly how long it takes for Christmas to reach every inhabited time zone.</p></article>
+      <article><b>Jan 7</b><p>Christmas Day for many Orthodox churches that follow the Julian calendar.</p></article>
+      <article><b>1843</b><p>The year the first commercial Christmas card was sent, in England.</p></article>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="sec wrap">
+    <div class="sec-head"><p class="kick">FAQ</p><h2>Questions about the days until Christmas</h2></div>
+    <div class="faq">
+      <details open><summary>Which country celebrates Christmas first?</summary><p>Kiritimati (Christmas Island) in Kiribati is in the UTC+14 time zone, so it is one of the first inhabited places to reach midnight on December 25.</p></details>
+      <details><summary>Which place celebrates Christmas last?</summary><p>American Samoa, in the UTC−11 time zone, is among the last inhabited places to reach Christmas Day – about 25 hours after Kiritimati.</p></details>
+      <details><summary>How many weeks until Christmas?</summary><p>Divide the days left by seven. The countdown on this page shows the exact number of weeks, days, hours and minutes in real time.</p></details>
+      <details><summary>When are the 12 days of Christmas?</summary><p>In the Western tradition, the twelve days of Christmas run from Christmas Day, December 25, to January 5. January 6 is Epiphany.</p></details>
+      <details><summary>When is Orthodox Christmas?</summary><p>Many Orthodox churches that follow the Julian calendar celebrate Christmas on January 7.</p></details>
+      <details><summary>Is Christmas a public holiday everywhere?</summary><p>No. Christmas is a public holiday in most countries, but not in all – in Japan, for example, December 25 is a normal working day.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="ft" id="contact">
+  <div class="wrap ft-in">
+    <div>
+      <span class="logo"><span class="logo-star" aria-hidden="true">★</span><span>Days<em>until</em>Christmas</span></span>
+      <p>A cosy Christmas countdown with a world clock and a festive checklist.</p>
+    </div>
+    <nav>
+      <a href="#">Countdown</a>
+      <a href="#world">World Clock</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy</a>
+    </nav>
+  </div>
+  <p class="wrap ft-copy">© <span id="yr"></span> Days until Christmas · Counting down with you.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function pad(n){return String(n).padStart(2,'0');}
+  function fmt(n){return Math.floor(n).toLocaleString('en-US');}
+  function dOnly(d){return new Date(d.getFullYear(),d.getMonth(),d.getDate());}
+  function dayDiff(a,b){return Math.round((dOnly(b)-dOnly(a))/864e5);}
+  function xYear(n){return (n.getMonth()===11&&n.getDate()>25)?n.getFullYear()+1:n.getFullYear();}
+  function toast(t){var e=$('toast');e.textContent=t;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove('show');},1800);}
+  var C=2*Math.PI*96; $('r-fg').style.strokeDasharray=C;
+  var copyTxt='';
+
+  /* ---------- Local countdown ---------- */
+  function tick(){
+    var now=new Date(), y=xYear(now), t=new Date(y,11,25), isX=now.getMonth()===11&&now.getDate()===25;
+    $('tag').textContent='25 December '+y+' · '+DAYS[t.getDay()];
+    var ms=Math.max(0,t-now), d=Math.floor(ms/864e5);
+    var sleeps=isX?0:dayDiff(now,t);
+    $('r-days').textContent=isX?'🎄':sleeps;
+    $('r-label').textContent=isX?'Merry Christmas!':(sleeps===1?'day to go':'days to go');
+    $('t-h').textContent=pad(Math.floor(ms%864e5/36e5)); $('t-m').textContent=pad(Math.floor(ms%36e5/6e4)); $('t-s').textContent=pad(Math.floor(ms%6e4/1e3));
+    $('u-weeks').textContent=(ms/6048e5).toFixed(1);
+    $('u-hours').textContent=fmt(ms/36e5);
+    $('u-mins').textContent=fmt(ms/6e4);
+    var sun=0,c=dOnly(now); c.setDate(c.getDate()+1); while(c<t){ if(c.getDay()===0) sun++; c.setDate(c.getDate()+1); }
+    $('u-sun').textContent=sun;
+    var st=new Date(y-1,11,26), pct=isX?100:Math.min(100,Math.max(0,(now-st)/(t-st)*100));
+    $('r-fg').style.strokeDashoffset=C*(1-pct/100);
+    $('ring-note').textContent=isX?'Christmas is here – enjoy every moment!':Math.floor(pct)+'% of the way from last Christmas';
+    copyTxt=isX?'It’s Christmas Day! 🎄':'🎄 '+sleeps+' days until Christmas '+y+' ('+d+' days, '+Math.floor(ms%864e5/36e5)+' hours and '+Math.floor(ms%36e5/6e4)+' minutes)';
+  }
+  $('copy').addEventListener('click',function(){
+    if(navigator.clipboard&&window.isSecureContext){ navigator.clipboard.writeText(copyTxt).then(function(){toast('Countdown copied');}); return; }
+    var a=document.createElement('textarea'); a.value=copyTxt; document.body.appendChild(a); a.select(); try{document.execCommand('copy');toast('Countdown copied');}catch(e){} a.remove();
+  });
+
+  /* ---------- World clock ---------- */
+  var CITIES=[['Kiritimati','Pacific/Kiritimati','🇰🇮'],['Auckland','Pacific/Auckland','🇳🇿'],['Sydney','Australia/Sydney','🇦🇺'],['Tokyo','Asia/Tokyo','🇯🇵'],['Dubai','Asia/Dubai','🇦🇪'],['London','Europe/London','🇬🇧'],['New York','America/New_York','🇺🇸'],['Los Angeles','America/Los_Angeles','🇺🇸'],['Honolulu','Pacific/Honolulu','🇺🇸'],['Pago Pago','Pacific/Pago_Pago','🇦🇸']];
+  var fmts={};
+  function parts(date,tz){
+    var f=fmts[tz]||(fmts[tz]=new Intl.DateTimeFormat('en-US',{timeZone:tz,hourCycle:'h23',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',second:'numeric'}));
+    var o={}; f.formatToParts(date).forEach(function(p){o[p.type]=+p.value;}); if(o.hour===24) o.hour=0; return o;
+  }
+  function offset(date,tz){ var p=parts(date,tz); return Date.UTC(p.year,p.month-1,p.day,p.hour,p.minute,p.second)-Math.floor(date.getTime()/1000)*1000; }
+  function midnightIn(tz,y){ var g=Date.UTC(y,11,25), t=g-offset(new Date(g),tz); return t-(offset(new Date(t),tz)-offset(new Date(g),tz)); }
+  function world(){
+    var now=Date.now();
+    $('cities').innerHTML=CITIES.map(function(c,i){
+      var p=parts(new Date(now),c[1]);
+      var y=(p.month===12&&p.day>25)?p.year+1:p.year;
+      var isX=p.month===12&&p.day===25;
+      var ms=Math.max(0,midnightIn(c[1],y)-now);
+      var d=Math.floor(ms/864e5), h=Math.floor(ms%864e5/36e5), m=Math.floor(ms%36e5/6e4);
+      var local=pad(p.hour)+':'+pad(p.minute)+' · '+MONTHS[p.month-1].slice(0,3)+' '+p.day;
+      return '<article class="city'+(isX?' xmas':'')+(i===0?' first':'')+'"><div class="c-top"><span class="flag">'+c[2]+'</span><div><h3>'+c[0]+'</h3><p>'+local+'</p></div></div>'
+        +(isX?'<b class="c-cd">🎄 It’s Christmas!</b>':'<b class="c-cd">'+d+'<small>d</small> '+pad(h)+'<small>h</small> '+pad(m)+'<small>m</small></b>')
+        +(i===0?'<span class="badge">First to celebrate</span>':(i===CITIES.length-1?'<span class="badge last">Among the last</span>':''))+'</article>';
+    }).join('');
+  }
+
+  /* ---------- Checklist ---------- */
+  var ITEMS=['Write the gift list and set a budget','Book travel or plan who is hosting','Order personalised and handmade gifts','Put up the tree and decorations','Start the Advent calendar','Write and post Christmas cards','Buy and wrap all the gifts','Plan the Christmas menu','Do the big food shop','Pick a Christmas film for Christmas Eve'];
+  var key='dc-check-'+xYear(new Date()), done=[];
+  try{ done=JSON.parse(localStorage.getItem(key))||[]; }catch(e){}
+  function drawList(){
+    $('checklist').innerHTML=ITEMS.map(function(t,i){ var on=done.indexOf(i)>-1; return '<li><label class="'+(on?'on':'')+'"><input type="checkbox" data-i="'+i+'"'+(on?' checked':'')+'><span class="box"></span><span class="txt">'+t+'</span></label></li>'; }).join('');
+    var p=Math.round(done.length/ITEMS.length*100);
+    $('cl-pct').textContent=p+'%'; $('cl-bar').style.width=p+'%';
+  }
+  $('checklist').addEventListener('change',function(e){
+    var i=+e.target.dataset.i; if(isNaN(i)) return;
+    if(e.target.checked){ if(done.indexOf(i)<0) done.push(i); } else done=done.filter(function(x){return x!==i;});
+    try{ localStorage.setItem(key,JSON.stringify(done)); }catch(err){}
+    drawList(); if(done.length===ITEMS.length) toast('All done – you’re ready for Christmas! 🎉');
+  });
+  $('cl-reset').addEventListener('click',function(){ done=[]; try{localStorage.removeItem(key);}catch(e){} drawList(); });
+
+  document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.nav').classList.remove('open');});});
+  $('yr').textContent=new Date().getFullYear();
+  tick(); world(); drawList();
+  setInterval(tick,1000); setInterval(world,30000);
+})();
+</script>
+</body>
+</html>
